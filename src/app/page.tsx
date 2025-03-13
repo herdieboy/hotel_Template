@@ -1,103 +1,60 @@
+import Navbar from "@/components/navbar";
+import Hero from "@/components/hero";
+import Footer from "@/components/footer";
 import Image from "next/image";
+import GridItem from "@/components/gridItem";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col gap-[5rem]">
+      <Navbar />
+      <Hero />
+      <div className="px-[1rem]">
+        <h3 className='max-w-[800px]'>Escape to the Scottish Highlands and unwind at the luxurious Glenclan hotel, nestled amidst breathtaking scenery, our hotel offers a tranquil retreat from the everyday. Indulge in lavish amenities, savor gourmet cuisine, and explore the serene countryside. Experience the peace and beauty of the Highlands in unparalleled comfort.</h3>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="border-t border-accent mx-[1rem]"></div>
+
+      <div className="px-[1rem]">
+        <h2 className="font-serif uppercase">Activities</h2>
+        <div className="relative flex gap-[2rem] py-[1rem] overflow-x-scroll">
+          <GridItem src="/sauna.jpg" alt="Sauna" title="Spa" description="Indulge in tranquility at our spa. Rejuvenate with bespoke treatments, drawing on ancient Scottish traditions, and emerge refreshed, surrounded by Highland serenity." />
+          <GridItem src="/nature2.jpg" alt="Grounds" title="Grounds" description="Explore acres of pristine Highland beauty. Wander through heather-clad hills, discover hidden lochs, and breathe in the invigorating air of the Scottish countryside." />
+          <GridItem src="/dining.jpg" alt="Dining" title="Dining" description="Savor the taste of Scotland. Our chefs craft exquisite dishes from locally sourced ingredients, offering a culinary journey as breathtaking as the views." />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+
+      <div className="border-t border-accent mx-[1rem]"></div>
+
+      <div className="w-full px-[1rem] flex flex-col md:flex-row gap-[2rem]">
+        <div className="w-full md:max-w-[300px] xl:max-w-[500px] flex flex-col gap-[2rem] md:order-first order-last">
+          <h2 className="font-serif uppercase">Rooms</h2>
+          <p>Retreat to your cozy haven at Glen Clan. Our bedrooms blend rustic charm with modern luxury, offering plush furnishings, crackling fireplaces (in select rooms), and stunning views. Experience true Highland comfort.</p>
+          <button className="mt-auto bg-text text-background p-[1rem] rounded-[0.5rem] transition-opacity hover:opacity-90">Read More</button>
+        </div>
+
+        <div className="relative grow aspect-16/11">
+          <Image src="/room1.jpg" alt="room" fill={true} style={{ objectFit: "cover" }} />
+        </div>
+      </div>
+
+      <div className="border-t border-accent mx-[1rem]"></div>
+
+      <div className="w-full px-[1rem] flex flex-col md:flex-row gap-[2rem]">
+        <div className="relative grow aspect-16/11">
+          <Image src="/pool2.jpg" alt="room" fill={true} style={{ objectFit: "cover" }} />
+        </div>
+
+        <div className="w-full md:max-w-[300px] xl:max-w-[500px] flex flex-col gap-[2rem]">
+          <h2 className="font-serif uppercase">The Spa</h2>
+          <p>Escape to a sanctuary of serenity at the Glen Clan spa. Surrender to the healing touch of our expert therapists, indulge in rejuvenating treatments using local botanicals, and emerge balanced and renewed amidst the tranquil beauty of the Highlands.</p>
+          <button className="mt-auto bg-text text-background p-[1rem] rounded-[0.5rem] transition-opacity hover:opacity-90">Read More</button>
+        </div>
+      </div>
+
+      <div className="border-t border-accent mx-[1rem]"></div>
+
+      <Footer />
     </div>
   );
 }
