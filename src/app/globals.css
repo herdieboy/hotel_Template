@@ -1,54 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Lexend+Deca:wght@100..900&display=swap');
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-    --color-background: #f1ebe3;
-    --color-foreground: #f1f1f1;
-    --color-text: #313131;
-    --color-contrast: #333333;
-    --color-accent: #AAA798;
-    --font-sans: "Lexend Deca", sans-serif;
-    --font-serif: "Fraunces", serif;
+  --color-background: #f1ebe3;
+  --color-foreground: #f1f1f1;
+  --color-text: #313131;
+  --color-contrast: #333333;
+  --color-accent: #aaa798;
+  --font-sans: 'Lexend Deca', sans-serif;
+  --font-serif: 'Fraunces', serif;
 }
 
 body {
-    background: var(--color-background);
-    color: var(--color-text);
-    font-family: var(--font-sans);
-    font-optical-sizing: auto;
-    font-style: normal;
-    line-height: 1;
-    font-weight: 300;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-optical-sizing: auto;
+  font-style: normal;
+  line-height: 1;
+  font-weight: 300;
 }
 
 h1 {
-    font-size: 6rem;
-    font-weight: 500;
-    font-family: var(--font-serif)
+  font-size: 6rem;
+  font-weight: 500;
+  font-family: var(--font-serif);
 }
 
 h2 {
-    font-size: 3rem;
-    font-weight: 300;
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 h3 {
-    font-size: 2rem;
-    font-weight: 300;
+  font-size: 2rem;
+  font-weight: 300;
 }
 
 h4 {
-    font-size: 1.5rem;
-    font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 300;
 }
 
 p {
-    font-size: 1rem;
-    font-weight: 200;
-    letter-spacing: 0.025rem;
-    line-height: 1.25;
+  font-size: 1rem;
+  font-weight: 200;
+  letter-spacing: 0.025rem;
+  line-height: 1.25;
 }
 
 .nav-item {
-    @apply before:transition-all flex justify-end items-center before:translate-x-1/2 before:rounded-full before:mr-[0.75rem] before:w-[0rem] before:h-[0rem] hover:before:w-[0.5rem] hover:before:h-[0.5rem] before:bg-background;
+  @apply before:transition-all flex justify-end items-center before:translate-x-1/2 before:rounded-full before:mr-[0.75rem] before:w-[0rem] before:h-[0rem] hover:before:w-[0.5rem] hover:before:h-[0.5rem] before:bg-background;
 }
