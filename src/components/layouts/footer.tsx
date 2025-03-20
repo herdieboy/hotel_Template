@@ -6,7 +6,10 @@ export default function Footer() {
   const year = today.getFullYear()
 
   return (
-    <footer className='mt-auto uppercase flex flex-col gap-[2rem] bg-accent text-background p-[2rem]'>
+    <footer
+      className='mt-auto uppercase flex flex-col gap-[2rem] bg-accent text-background p-[2rem]'
+      suppressHydrationWarning
+    >
       <div className='flex flex-col gap-[0.5rem] text-right'>
         {menuItems.map((item) => (
           <Link key={item.href} href={item.href} className='hover:underline'>

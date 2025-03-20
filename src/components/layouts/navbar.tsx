@@ -42,36 +42,31 @@ export default function Navbar() {
   )
 
   return (
-    <>
-      <div
-        className={`${menuOpen ? 'h-svh' : 'h-[5rem]'} transition-[top,height] duration-500 bg-background text-text fixed z-50 w-full flex border-b border-accent uppercase items-center gap-[1rem] overflow-hidden`}
-      >
-        <div className='h-[5rem] px-[2rem] flex items-center justify-between w-full mb-auto'>
-          <div className='font-serif mr-auto text-[1.5rem]'>GLEN CLAN</div>
-          <div
-            className='z-50 cursor-pointer'
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            {menuOpen ? closeIcon : burgerIcon}
-          </div>
-        </div>
-
-        <div
-          className={`absolute top-0 left-0 w-svw h-svh flex flex-col justify-center items-center text-[2rem] font-medium`}
-        >
-          {menuItems.map((item, index) => (
-            <Link
-              key={index}
-              href={item.href}
-              className={`${hovered ? 'text-accent' : 'text-text'} transition-colors duration-500 font-serif group-hover:text-accent hover:text-text py-[0.5rem]`}
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
+    <div
+      className={`${menuOpen ? 'h-svh' : 'h-[5rem]'} transition-[top,height] duration-500 bg-background text-text fixed z-50 w-full flex border-b border-accent uppercase items-center gap-[1rem] overflow-hidden`}
+    >
+      <div className='z-50 h-[5rem] px-[2rem] flex items-center justify-between w-full mb-auto'>
+        <Link href='/' className='font-serif mr-auto text-[1.5rem]'>
+          GLEN CLAN
+        </Link>
+        <div className='cursor-pointer' onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? closeIcon : burgerIcon}
         </div>
       </div>
-    </>
+
+      <div className='z-40 absolute top-0 left-0 w-svw h-svh flex flex-col justify-center items-center text-[2rem] font-medium'>
+        {menuItems.map((item, index) => (
+          <Link
+            key={index}
+            href={item.href}
+            className={`${hovered ? 'text-accent' : 'text-text'} transition-colors duration-500 font-serif group-hover:text-accent hover:text-text py-[0.5rem]`}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {item.label}
+          </Link>
+        ))}
+      </div>
+    </div>
   )
 }

@@ -1,7 +1,7 @@
 export const menuItems = [
   { label: 'Home', href: '/' },
   { label: 'The House', href: '/house' },
-  { label: 'The Spa', href: '/spa' },
+  { label: 'Spa', href: '/spa' },
   { label: 'Rooms', href: '/rooms' },
   { label: 'Food and Drink', href: '/dining' },
   { label: 'Contact', href: '/contact' },
