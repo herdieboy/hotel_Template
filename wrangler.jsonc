@@ -1,12 +1,12 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "main": ".open-next/worker.js",
-  "name": "hotel",
+  "name": "glenclan",
   "compatibility_date": "2025-03-19",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {
     "directory": ".open-next/assets",
-    "binding": "ASSETS"
+    "binding": "ASSETS",
   },
   "kv_namespaces": [
     // Create a KV binding with the binding name "NEXT_CACHE_WORKERS_KV"
@@ -15,5 +15,5 @@
     //   "binding": "NEXT_CACHE_WORKERS_KV",
     //   "id": "<BINDING_ID>"
     // }
-  ]
+  ],
 }
