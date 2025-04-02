@@ -1,7 +1,6 @@
 import Navbar from '@/components/layouts/navbar'
 import Footer from '@/components/layouts/footer'
 import Image from 'next/image'
-import Link from 'next/link'
 
 export default function Spa() {
   return (
