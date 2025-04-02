@@ -13,7 +13,7 @@ export default function HouseHistory() {
           <p>
             Glen Clan has been the ancestral home of the MacHerd family for over
             400 years. What began as a modest hunting lodge in the early 17th
-            century has evolved into one of Scotland's most distinguished
+            century has evolved into one of Scotland&apos;s most distinguished
             country houses, while remaining a cherished family home through the
             generations.
           </p>
@@ -22,11 +22,11 @@ export default function HouseHistory() {
             <h3 className='font-serif text-lg'>The MacHerd Legacy</h3>
             <p className='text-sm'>
               Today, Glen Clan is owned and operated by the 12th generation of
-              MacHerds, who continue their family's tradition of Highland
-              hospitality while preserving the house's rich heritage for future
-              generations. The MacHerd family's deep connection to the land and
-              their commitment to Scottish traditions has shaped Glen Clan into
-              what it is today.
+              MacHerds, who continue their family&apos;s tradition of Highland
+              hospitality while preserving the house&apos;s rich heritage for
+              future generations. The MacHerd family&apos;s deep connection to
+              the land and their commitment to Scottish traditions has shaped
+              Glen Clan into what it is today.
             </p>
           </div>
 
